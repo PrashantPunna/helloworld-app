@@ -1,0 +1,21 @@
+<h1>Followers</h1>
+
+<div class="media" *ngFor='let follower of followers'>
+    <img class="mr-3 rounded-circle" src={{follower.avatar_url}} alt="Generic placeholder image">
+    <div class="media-body">
+      <h3>
+        <a [routerLink]="['/followers', follower.id,follower.login]">{{ follower.login }}</a>
+      </h3>
+        <a [href]="follower.html_url">{{ follower.html_url }}</a>
+    </div>
+  </div>
+
+
+
+<!-- <ul class="list-group">
+  <li class="list-group-item border-0" *ngFor='let follower of followers' >
+    <img [src]=follower.avatar_url alt="" class="rounded-circle img-thumbnail">
+    <h3>{{ follower.login }}</h3>
+    <span>{{ follower.html_url }}</span>
+  </li>
+</ul> -->
